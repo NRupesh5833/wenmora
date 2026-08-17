@@ -17,6 +17,7 @@ import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as WorkIndexRouteImport } from './routes/work.index'
 import { Route as WorkSlugRouteImport } from './routes/work.$slug'
@@ -61,6 +62,11 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -86,6 +92,7 @@ export interface FileRoutesByFullPath {
   '/process': typeof ProcessRoute
   '/refund-policy': typeof RefundPolicyRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/work/$slug': typeof WorkSlugRoute
   '/work/': typeof WorkIndexRoute
@@ -99,6 +106,7 @@ export interface FileRoutesByTo {
   '/process': typeof ProcessRoute
   '/refund-policy': typeof RefundPolicyRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/work/$slug': typeof WorkSlugRoute
   '/work': typeof WorkIndexRoute
@@ -113,6 +121,7 @@ export interface FileRoutesById {
   '/process': typeof ProcessRoute
   '/refund-policy': typeof RefundPolicyRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/work/$slug': typeof WorkSlugRoute
   '/work/': typeof WorkIndexRoute
@@ -128,6 +137,7 @@ export interface FileRouteTypes {
     | '/process'
     | '/refund-policy'
     | '/services'
+    | '/sitemap.xml'
     | '/terms'
     | '/work/$slug'
     | '/work/'
@@ -141,6 +151,7 @@ export interface FileRouteTypes {
     | '/process'
     | '/refund-policy'
     | '/services'
+    | '/sitemap.xml'
     | '/terms'
     | '/work/$slug'
     | '/work'
@@ -154,6 +165,7 @@ export interface FileRouteTypes {
     | '/process'
     | '/refund-policy'
     | '/services'
+    | '/sitemap.xml'
     | '/terms'
     | '/work/$slug'
     | '/work/'
@@ -168,6 +180,7 @@ export interface RootRouteChildren {
   ProcessRoute: typeof ProcessRoute
   RefundPolicyRoute: typeof RefundPolicyRoute
   ServicesRoute: typeof ServicesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   WorkSlugRoute: typeof WorkSlugRoute
   WorkIndexRoute: typeof WorkIndexRoute
@@ -231,6 +244,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -264,6 +284,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProcessRoute: ProcessRoute,
   RefundPolicyRoute: RefundPolicyRoute,
   ServicesRoute: ServicesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   WorkSlugRoute: WorkSlugRoute,
   WorkIndexRoute: WorkIndexRoute,
