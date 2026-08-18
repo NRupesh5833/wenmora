@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MessageCircle, Phone } from "lucide-react";
+import logoAsset from "@/assets/wenmora-logo.png.asset.json";
 import { business, contactInfo, services, whatsappLink } from "@/config/site";
 import { track } from "@/lib/track";
 
@@ -23,7 +24,14 @@ export function Footer() {
     <footer className="border-t border-border bg-surface/40">
       <div className="container-x grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:py-20">
         <div>
-          <p className="font-display text-lg font-semibold">{business.name}</p>
+          <img
+            src={logoAsset.url}
+            alt={`${business.name} — Design, Develop, Elevate`}
+            width={976}
+            height={728}
+            loading="lazy"
+            className="h-14 w-auto"
+          />
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
             We design and develop websites that help businesses build credibility, generate enquiries and grow online.
           </p>
