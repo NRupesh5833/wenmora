@@ -6,7 +6,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { business, contactInfo, whatsappLink } from "@/config/site";
 import { track } from "@/lib/track";
 
-const title = `Contact — Let's Discuss Your Project | ${business.name}`;
+const title = `Contact — Let's Create What's Next | ${business.name}`;
 const description =
   "Contact our website design and development team by form, email, phone or WhatsApp to discuss your business website project.";
 
@@ -52,7 +52,7 @@ function ContactPage() {
     <>
       <PageHeader
         eyebrow="Contact"
-        title="Let's Discuss Your Project"
+        title="Let's Create What's Next."
         description="Share a few details about your business and we'll respond with the right next step — a call, a quote, or a quick strategy suggestion."
       />
 

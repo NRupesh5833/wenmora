@@ -7,7 +7,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { Button } from "@/components/ui/button";
 import { business, services } from "@/config/site";
 
-const title = `Website Design & Development Services — ${business.name}`;
+const title = `Services — Design, Development, AI & Automation — ${business.name}`;
 const description =
   "Website design, development, landing pages, e-commerce, redesign, SEO and maintenance services for businesses that want a stronger online presence.";
 
@@ -33,7 +33,7 @@ function ServicesPage() {
     <>
       <PageHeader
         eyebrow="Services"
-        title="Everything You Need to Build a Strong Online Presence"
+        title="Design, Technology and Intelligence Under One Roof."
         description="Design, development, optimization and support — delivered as one coherent engagement rather than disconnected tasks."
       />
 
