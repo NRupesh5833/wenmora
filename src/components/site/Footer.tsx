@@ -30,7 +30,7 @@ export function Footer() {
             width={976}
             height={728}
             loading="lazy"
-            className="h-14 w-auto"
+            className="h-20 w-auto"
           />
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
             We design and develop websites that help businesses build credibility, generate enquiries and grow online.
