@@ -8,10 +8,12 @@
 
 export const business = {
   name: "Wenmora",
+  legalName: "Wenmora Technologies",
   shortName: "Wenmora",
   tagline: "Design • Develop • Elevate",
   description:
-    "We design and develop modern, high-performance websites that help businesses build credibility, generate enquiries and grow online.",
+    "Wenmora Technologies combines strategy, design, development and AI to create high-performance digital experiences for modern businesses.",
+  positioning: "Premium digital experience & creative technology studio.",
   /** TODO: replace with your city / service area */
   city: "[CITY]",
   region: "[STATE]",
@@ -63,6 +65,53 @@ export const trustStats = [
   { value: "[XX]+", label: "Businesses served" },
   { value: "[XX]+", label: "Industries covered" },
   { value: "[XX]%", label: "Client satisfaction" },
+];
+
+/** Capability strip shown directly under the hero. */
+export const capabilities = [
+  "Web Experiences",
+  "AI Solutions",
+  "Digital Products",
+  "Automation",
+];
+
+/** The four connected pillars beyond website development. */
+export const pillars = [
+  {
+    num: "01",
+    title: "Strategy",
+    text: "Business goals, customer journey and digital strategy defined before a single pixel.",
+    items: ["Business goals", "Customer journey", "Digital strategy"],
+    icon: "Compass",
+  },
+  {
+    num: "02",
+    title: "Experience",
+    text: "Interfaces and interactions designed to feel effortless and unmistakably yours.",
+    items: ["UX", "UI", "Interaction", "Motion"],
+    icon: "Layers",
+  },
+  {
+    num: "03",
+    title: "Intelligence",
+    text: "AI and automation applied where they create genuine value, not novelty.",
+    items: ["AI", "Automation", "Smart interfaces"],
+    icon: "Sparkles",
+  },
+  {
+    num: "04",
+    title: "Growth",
+    text: "Search, conversion and analytics wired in so the work keeps compounding.",
+    items: ["SEO", "Conversion", "Analytics", "Optimization"],
+    icon: "TrendingUp",
+  },
+];
+
+/** How we think — three principles. */
+export const principles = [
+  { num: "01", title: "Think", text: "Understand the business before designing anything." },
+  { num: "02", title: "Create", text: "Turn strategy into a memorable, deliberate experience." },
+  { num: "03", title: "Engineer", text: "Build technology that performs under real conditions." },
 ];
 
 export const problems = [
