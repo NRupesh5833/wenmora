@@ -34,18 +34,11 @@ export function Navbar() {
       <nav className="container-x flex h-16 items-center justify-between gap-4 lg:h-20" aria-label="Main">
         <Link to="/" className="flex shrink-0 items-center pr-4" aria-label={`${business.name} home`}>
           <img
-            src={logoAsset.url}
-            alt={`${business.name} — Design, Develop, Elevate`}
-            width={976}
-            height={728}
-            className="hidden h-11 w-auto sm:block lg:h-14"
-          />
-          <img
             src={markAsset.url}
             alt={`${business.name} logo`}
             width={965}
             height={529}
-            className="h-8 w-auto sm:hidden"
+            className="h-9 w-auto lg:h-11"
           />
         </Link>
 
