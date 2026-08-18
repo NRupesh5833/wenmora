@@ -30,14 +30,20 @@ export function Navbar() {
           : "border-b border-transparent",
       )}
     >
-      <nav className="container-x flex h-16 items-center justify-between gap-4 lg:h-20" aria-label="Main">
+      <nav
+        className={cn(
+          "container-x flex items-center justify-between gap-4 transition-[height] duration-300",
+          scrolled ? "h-14 lg:h-16" : "h-16 lg:h-20",
+        )}
+        aria-label="Main"
+      >
         <Link to="/" className="flex shrink-0 items-center pr-4" aria-label={`${business.name} home`}>
           <img
             src={markAsset.url}
             alt={`${business.name} logo`}
             width={965}
             height={529}
-            className="h-9 w-auto lg:h-11"
+            className={cn("w-auto transition-all duration-300", scrolled ? "h-8 lg:h-9" : "h-9 lg:h-11")}
           />
         </Link>
 
@@ -47,8 +53,8 @@ export function Navbar() {
               <Link
                 to={link.to}
                 activeOptions={{ exact: link.to === "/" }}
-                className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                activeProps={{ className: "text-foreground" }}
+                className="relative rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground after:absolute after:inset-x-3 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100"
+                activeProps={{ className: "text-foreground after:scale-x-100" }}
               >
                 {link.label}
               </Link>
