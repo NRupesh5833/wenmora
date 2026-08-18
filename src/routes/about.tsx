@@ -5,7 +5,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { business, processSteps } from "@/config/site";
 
-const title = `About Us — Website Design Studio | ${business.name}`;
+const title =  `About — Creative Technology Studio | ${business.name}`;
 const description =
   "We are a website design and development studio helping businesses build modern, credible websites that generate enquiries and support growth.";
 
@@ -39,7 +39,7 @@ function AboutPage() {
     <>
       <PageHeader
         eyebrow="About"
-        title="A Studio Built Around Business Outcomes"
+        title="We Design What's Next."
         description="We design and develop websites for businesses that need their online presence to actually work — not just exist."
       />
 

@@ -32,8 +32,10 @@ export function Footer() {
             loading="lazy"
             className="h-20 w-auto"
           />
+          <p className="eyebrow mt-3">Design &bull; Develop &bull; Elevate</p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            We design and develop websites that help businesses build credibility, generate enquiries and grow online.
+            Wenmora Technologies combines strategy, design, development and AI to create digital experiences for
+            modern businesses.
           </p>
           <ul className="mt-5 flex flex-wrap gap-2">
             {contactInfo.socials.map((s) => (
@@ -51,8 +53,8 @@ export function Footer() {
           </ul>
         </div>
 
-        <nav aria-label="Company">
-          <h2 className="text-sm font-semibold tracking-widest text-muted-foreground uppercase">Company</h2>
+        <nav aria-label="Explore">
+          <h2 className="eyebrow">Explore</h2>
           <ul className="mt-4 space-y-2.5">
             {companyLinks.map((l) => (
               <li key={l.to}>
@@ -65,7 +67,7 @@ export function Footer() {
         </nav>
 
         <nav aria-label="Services">
-          <h2 className="text-sm font-semibold tracking-widest text-muted-foreground uppercase">Services</h2>
+          <h2 className="eyebrow">Services</h2>
           <ul className="mt-4 space-y-2.5">
             {services.slice(0, 6).map((s) => (
               <li key={s.slug}>
@@ -82,7 +84,7 @@ export function Footer() {
         </nav>
 
         <div>
-          <h2 className="text-sm font-semibold tracking-widest text-muted-foreground uppercase">Contact</h2>
+          <h2 className="eyebrow">Connect</h2>
           <ul className="mt-4 space-y-3 text-sm">
             <li>
               <a
@@ -125,7 +127,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="container-x flex flex-col gap-3 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 {business.name}. All rights reserved.</p>
+          <p>© 2026 {business.legalName}. All rights reserved.</p>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             {legalLinks.map((l) => (
               <li key={l.to}>

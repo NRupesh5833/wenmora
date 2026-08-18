@@ -8,10 +8,12 @@
 
 export const business = {
   name: "Wenmora",
+  legalName: "Wenmora Technologies",
   shortName: "Wenmora",
   tagline: "Design • Develop • Elevate",
   description:
-    "We design and develop modern, high-performance websites that help businesses build credibility, generate enquiries and grow online.",
+    "Wenmora Technologies combines strategy, design, development and AI to create high-performance digital experiences for modern businesses.",
+  positioning: "Premium digital experience & creative technology studio.",
   /** TODO: replace with your city / service area */
   city: "[CITY]",
   region: "[STATE]",
@@ -65,6 +67,53 @@ export const trustStats = [
   { value: "[XX]%", label: "Client satisfaction" },
 ];
 
+/** Capability strip shown directly under the hero. */
+export const capabilities = [
+  "Web Experiences",
+  "AI Solutions",
+  "Digital Products",
+  "Automation",
+];
+
+/** The four connected pillars beyond website development. */
+export const pillars = [
+  {
+    num: "01",
+    title: "Strategy",
+    text: "Business goals, customer journey and digital strategy defined before a single pixel.",
+    items: ["Business goals", "Customer journey", "Digital strategy"],
+    icon: "Compass",
+  },
+  {
+    num: "02",
+    title: "Experience",
+    text: "Interfaces and interactions designed to feel effortless and unmistakably yours.",
+    items: ["UX", "UI", "Interaction", "Motion"],
+    icon: "Layers",
+  },
+  {
+    num: "03",
+    title: "Intelligence",
+    text: "AI and automation applied where they create genuine value, not novelty.",
+    items: ["AI", "Automation", "Smart interfaces"],
+    icon: "Sparkles",
+  },
+  {
+    num: "04",
+    title: "Growth",
+    text: "Search, conversion and analytics wired in so the work keeps compounding.",
+    items: ["SEO", "Conversion", "Analytics", "Optimization"],
+    icon: "TrendingUp",
+  },
+];
+
+/** How we think — three principles. */
+export const principles = [
+  { num: "01", title: "Think", text: "Understand the business before designing anything." },
+  { num: "02", title: "Create", text: "Turn strategy into a memorable, deliberate experience." },
+  { num: "03", title: "Engineer", text: "Build technology that performs under real conditions." },
+];
+
 export const problems = [
   { title: "Outdated design", text: "A dated website quietly tells visitors the business is dated too." },
   { title: "Poor mobile experience", text: "Most visitors arrive on a phone. Broken layouts lose them instantly." },
@@ -86,9 +135,9 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "website-design",
-    title: "Website Design",
-    description: "Custom UI/UX designed around your brand and your customers.",
+    slug: "web-experience-design",
+    title: "Web Experience Design",
+    description: "Custom websites and digital experiences designed around users and business goals.",
     icon: "PenTool",
     details: [
       "Brand-aligned visual direction and design system",
@@ -97,9 +146,9 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "website-development",
-    title: "Website Development",
-    description: "Fast, responsive and scalable websites built on a modern stack.",
+    slug: "web-development",
+    title: "Web Development",
+    description: "Fast, responsive and scalable digital products built on a modern stack.",
     icon: "Code2",
     details: [
       "Component-based, maintainable front-end code",
@@ -108,46 +157,50 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "landing-pages",
-    title: "Landing Pages",
-    description: "High-converting landing pages for campaigns and lead generation.",
-    icon: "Target",
-    details: ["Single-goal page structure", "Lead capture forms and tracking hooks", "Ad and campaign ready"],
+    slug: "ai-experiences",
+    title: "AI-Powered Experiences",
+    description: "AI-assisted interfaces, intelligent experiences and practical AI integrations.",
+    icon: "Sparkles",
+    details: [
+      "AI-assisted content and visual generation",
+      "Assistants, search and smart interfaces",
+      "Model integrations wired into real workflows",
+    ],
   },
   {
-    slug: "business-websites",
-    title: "Business Websites",
-    description: "Professional websites for companies and local businesses.",
-    icon: "Building2",
-    details: ["Service, about and contact architecture", "Local SEO foundations", "Enquiry-first layout"],
+    slug: "uiux-branding",
+    title: "UI/UX & Branding",
+    description: "Visual systems, interfaces and brand experiences with a consistent voice.",
+    icon: "Palette",
+    details: ["Brand and visual identity direction", "Design systems and component libraries", "Interface and interaction design"],
   },
   {
     slug: "ecommerce",
-    title: "E-commerce Websites",
-    description: "Online stores designed for smooth, trustworthy shopping experiences.",
+    title: "E-commerce",
+    description: "High-performance online stores focused on usability and conversion.",
     icon: "ShoppingBag",
     details: ["Catalogue and product page design", "Checkout and payment integration", "Order and inventory workflows"],
   },
   {
-    slug: "website-redesign",
-    title: "Website Redesign",
-    description: "Transform outdated websites into modern digital experiences.",
-    icon: "RefreshCw",
-    details: ["Audit of the existing site", "Content and structure rework", "Migration without losing search equity"],
+    slug: "automation",
+    title: "Business Automation",
+    description: "Digital workflows and automation designed to reduce repetitive work.",
+    icon: "Workflow",
+    details: ["Process mapping and workflow design", "Integrations between the tools you already use", "Automated notifications and reporting"],
   },
   {
-    slug: "seo",
-    title: "SEO Optimization",
-    description: "Technical and on-page SEO foundations for better search visibility.",
-    icon: "Search",
-    details: ["Metadata, schema and sitemap setup", "Heading and content structure", "Core Web Vitals attention"],
+    slug: "custom-software",
+    title: "Custom Software",
+    description: "Web applications and business-specific digital tools built to fit.",
+    icon: "Boxes",
+    details: ["Web application architecture", "Dashboards, portals and internal tools", "Databases, APIs and integrations"],
   },
   {
-    slug: "maintenance",
-    title: "Website Maintenance",
-    description: "Ongoing updates, improvements and technical support after launch.",
-    icon: "LifeBuoy",
-    details: ["Content and section updates", "Security and dependency updates", "Monthly improvement suggestions"],
+    slug: "digital-growth",
+    title: "Digital Growth",
+    description: "SEO, conversion optimization, analytics and continuous improvement.",
+    icon: "TrendingUp",
+    details: ["Technical and on-page SEO foundations", "Conversion and funnel optimization", "Analytics, reporting and iteration"],
   },
 ];
 
@@ -247,26 +300,26 @@ export const projects: Project[] = [
 ];
 
 export const whyChooseUs = [
-  { title: "Custom Design", text: "Every website is designed around the business, never dropped into a template.", icon: "Sparkles" },
-  { title: "Mobile First", text: "Optimized for phones, tablets and desktops from the first wireframe.", icon: "Smartphone" },
-  { title: "Conversion Focused", text: "Designed around enquiries, calls, bookings and sales - not decoration.", icon: "TrendingUp" },
-  { title: "Fast Performance", text: "Performance-conscious development with lean assets and clean code.", icon: "Zap" },
-  { title: "SEO Ready", text: "Built with technical SEO fundamentals in place from day one.", icon: "Search" },
-  { title: "Transparent Process", text: "Clear communication, defined scope and no surprises mid-project.", icon: "ShieldCheck" },
-  { title: "Ongoing Support", text: "Support and improvements continue after launch day.", icon: "LifeBuoy" },
+  { title: "Custom", text: "No generic templates. Every experience is designed around one business.", icon: "PenTool" },
+  { title: "Strategic", text: "Design begins with business goals, not with a colour palette.", icon: "Compass" },
+  { title: "Conversion-focused", text: "Every important interaction on the page has a purpose.", icon: "Target" },
+  { title: "Technology-driven", text: "Modern development, clean architecture and real integrations.", icon: "Code2" },
+  { title: "AI-assisted", text: "We use AI where it creates genuine value — never as decoration.", icon: "Sparkles" },
+  { title: "Long-term", text: "We build relationships that continue well beyond launch day.", icon: "LifeBuoy" },
 ];
 
 export const processSteps = [
-  { step: "01", title: "Discovery", text: "Understand the business, audience and goals." },
-  { step: "02", title: "Strategy", text: "Create the sitemap, content structure and conversion strategy." },
-  { step: "03", title: "Design", text: "Create the UI/UX and the visual direction." },
-  { step: "04", title: "Development", text: "Build the responsive, production-ready website." },
-  { step: "05", title: "Testing", text: "Test performance, responsiveness, forms and functionality." },
-  { step: "06", title: "Launch", text: "Deploy the website and configure the required services." },
-  { step: "07", title: "Support", text: "Provide ongoing maintenance and improvements." },
+  { step: "01", title: "Discover", text: "Understand the business, the audience and what success means." },
+  { step: "02", title: "Strategize", text: "Define goals, positioning and the customer journey." },
+  { step: "03", title: "Design", text: "Create the visual direction and the user experience." },
+  { step: "04", title: "Build", text: "Develop the digital experience on a modern, scalable stack." },
+  { step: "05", title: "Refine", text: "Test, optimize and polish across devices and conditions." },
+  { step: "06", title: "Launch", text: "Deploy and connect the systems the business depends on." },
+  { step: "07", title: "Evolve", text: "Support, measure and improve continuously after launch." },
 ];
 
 export const industries = [
+  { name: "Technology", text: "Capability-led structure built for procurement-stage and technical buyers." },
   { name: "Restaurants", text: "Menu discovery, photo-led storytelling and one-tap table reservations." },
   { name: "Real Estate", text: "Filterable listings, location context and enquiry forms tied to each property." },
   { name: "Healthcare", text: "Clear service and doctor information with accessible appointment requests." },

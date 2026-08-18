@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { business, projects } from "@/config/site";
 import { projectImages } from "@/lib/project-images";
 
-const title = `Selected Work — Website Design Portfolio | ${business.name}`;
+const title = `Selected Digital Experiences — Portfolio | ${business.name}`;
 const description =
   "Selected website design and development concepts across restaurant, real estate, IT and fitness businesses, each built around enquiries and conversions.";
 
@@ -33,7 +33,7 @@ function WorkPage() {
     <>
       <PageHeader
         eyebrow="Portfolio"
-        title="Selected Work"
+        title="Selected Digital Experiences."
         description="These are demo concepts created to demonstrate our design and development approach for different industries. They are clearly marked and are not presented as client projects."
       />
 

@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { Reveal } from "@/components/site/Reveal";
 import { business, processSteps } from "@/config/site";
 
-const title = `Our Process — How We Build Websites | ${business.name}`;
+const title = `Our Process — From Idea to Impact | ${business.name}`;
 const description =
   "Discovery, strategy, design, development, testing, launch and support — a transparent seven-stage process for every website project.";
 
@@ -30,7 +30,7 @@ function ProcessPage() {
     <>
       <PageHeader
         eyebrow="Process"
-        title="A Transparent Process, From Discovery to Support"
+        title="From Idea to Impact."
         description="You always know which stage the project is in, what is expected from you, and what happens next."
       />
 
