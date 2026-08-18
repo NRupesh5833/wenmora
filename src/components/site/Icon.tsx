@@ -1,7 +1,11 @@
 import {
+  Boxes,
   Building2,
   Code2,
+  Compass,
+  Layers,
   LifeBuoy,
+  Palette,
   PenTool,
   RefreshCw,
   Search,
@@ -11,14 +15,19 @@ import {
   Sparkles,
   Target,
   TrendingUp,
+  Workflow,
   Zap,
   type LucideIcon,
 } from "lucide-react";
 
 const icons: Record<string, LucideIcon> = {
+  Boxes,
   Building2,
   Code2,
+  Compass,
+  Layers,
   LifeBuoy,
+  Palette,
   PenTool,
   RefreshCw,
   Search,
@@ -28,6 +37,7 @@ const icons: Record<string, LucideIcon> = {
   Sparkles,
   Target,
   TrendingUp,
+  Workflow,
   Zap,
 };
 
