@@ -2,7 +2,6 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/wenmora-logo.png.asset.json";
 import markAsset from "@/assets/wenmora-mark.png.asset.json";
 import { business, navLinks } from "@/config/site";
 import { track } from "@/lib/track";
