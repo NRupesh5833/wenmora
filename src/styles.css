@@ -215,6 +215,97 @@
   }
 }
 
+@utility eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--foreground) 55%, transparent);
+}
+
+@utility hairline {
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in oklab, var(--primary) 45%, transparent),
+    transparent
+  );
+  height: 1px;
+}
+
+@utility dot-grid {
+  background-image: radial-gradient(
+    color-mix(in oklab, var(--foreground) 12%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+@utility glass-panel {
+  background: color-mix(in oklab, var(--surface-2) 55%, transparent);
+  border: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(10px);
+}
+
+@utility edge-card {
+  position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  background:
+    radial-gradient(
+      420px 180px at 20% 0%,
+      color-mix(in oklab, var(--primary) 10%, transparent),
+      transparent 70%
+    ),
+    linear-gradient(
+      165deg,
+      color-mix(in oklab, var(--surface-2) 90%, transparent),
+      color-mix(in oklab, var(--surface) 96%, transparent)
+    );
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: color-mix(in oklab, var(--primary) 50%, transparent);
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@utility float-slow {
+  animation: wm-float 9s ease-in-out infinite;
+}
+
+@utility float-slower {
+  animation: wm-float 13s ease-in-out infinite;
+}
+
+@utility orbit-slow {
+  animation: wm-orbit 38s linear infinite;
+}
+
+@keyframes wm-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+@keyframes wm-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
