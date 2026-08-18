@@ -79,7 +79,7 @@ function Home() {
                 width={976}
                 height={728}
                 fetchPriority="high"
-                className="mb-8 h-20 w-auto sm:h-24"
+                className="mb-8 h-28 w-auto sm:h-36"
               />
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/70 px-3 py-1.5 text-xs tracking-widest text-muted-foreground uppercase">
                 <span className="size-1.5 rounded-full bg-primary" aria-hidden="true" />
