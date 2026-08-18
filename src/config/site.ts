@@ -300,26 +300,26 @@ export const projects: Project[] = [
 ];
 
 export const whyChooseUs = [
-  { title: "Custom Design", text: "Every website is designed around the business, never dropped into a template.", icon: "Sparkles" },
-  { title: "Mobile First", text: "Optimized for phones, tablets and desktops from the first wireframe.", icon: "Smartphone" },
-  { title: "Conversion Focused", text: "Designed around enquiries, calls, bookings and sales - not decoration.", icon: "TrendingUp" },
-  { title: "Fast Performance", text: "Performance-conscious development with lean assets and clean code.", icon: "Zap" },
-  { title: "SEO Ready", text: "Built with technical SEO fundamentals in place from day one.", icon: "Search" },
-  { title: "Transparent Process", text: "Clear communication, defined scope and no surprises mid-project.", icon: "ShieldCheck" },
-  { title: "Ongoing Support", text: "Support and improvements continue after launch day.", icon: "LifeBuoy" },
+  { title: "Custom", text: "No generic templates. Every experience is designed around one business.", icon: "PenTool" },
+  { title: "Strategic", text: "Design begins with business goals, not with a colour palette.", icon: "Compass" },
+  { title: "Conversion-focused", text: "Every important interaction on the page has a purpose.", icon: "Target" },
+  { title: "Technology-driven", text: "Modern development, clean architecture and real integrations.", icon: "Code2" },
+  { title: "AI-assisted", text: "We use AI where it creates genuine value — never as decoration.", icon: "Sparkles" },
+  { title: "Long-term", text: "We build relationships that continue well beyond launch day.", icon: "LifeBuoy" },
 ];
 
 export const processSteps = [
-  { step: "01", title: "Discovery", text: "Understand the business, audience and goals." },
-  { step: "02", title: "Strategy", text: "Create the sitemap, content structure and conversion strategy." },
-  { step: "03", title: "Design", text: "Create the UI/UX and the visual direction." },
-  { step: "04", title: "Development", text: "Build the responsive, production-ready website." },
-  { step: "05", title: "Testing", text: "Test performance, responsiveness, forms and functionality." },
-  { step: "06", title: "Launch", text: "Deploy the website and configure the required services." },
-  { step: "07", title: "Support", text: "Provide ongoing maintenance and improvements." },
+  { step: "01", title: "Discover", text: "Understand the business, the audience and what success means." },
+  { step: "02", title: "Strategize", text: "Define goals, positioning and the customer journey." },
+  { step: "03", title: "Design", text: "Create the visual direction and the user experience." },
+  { step: "04", title: "Build", text: "Develop the digital experience on a modern, scalable stack." },
+  { step: "05", title: "Refine", text: "Test, optimize and polish across devices and conditions." },
+  { step: "06", title: "Launch", text: "Deploy and connect the systems the business depends on." },
+  { step: "07", title: "Evolve", text: "Support, measure and improve continuously after launch." },
 ];
 
 export const industries = [
+  { name: "Technology", text: "Capability-led structure built for procurement-stage and technical buyers." },
   { name: "Restaurants", text: "Menu discovery, photo-led storytelling and one-tap table reservations." },
   { name: "Real Estate", text: "Filterable listings, location context and enquiry forms tied to each property." },
   { name: "Healthcare", text: "Clear service and doctor information with accessible appointment requests." },
