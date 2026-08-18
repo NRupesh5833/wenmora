@@ -7,10 +7,9 @@
  */
 
 export const business = {
-  /** TODO: replace with your registered business name */
-  name: "[YOUR BUSINESS NAME]",
-  shortName: "[BRAND]",
-  tagline: "Websites Built to Turn Visitors Into Customers.",
+  name: "Wenmora",
+  shortName: "Wenmora",
+  tagline: "Design • Develop • Elevate",
   description:
     "We design and develop modern, high-performance websites that help businesses build credibility, generate enquiries and grow online.",
   /** TODO: replace with your city / service area */

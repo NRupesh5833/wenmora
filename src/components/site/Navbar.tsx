@@ -2,6 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import markAsset from "@/assets/wenmora-mark.png.asset.json";
 import { business, navLinks } from "@/config/site";
 import { track } from "@/lib/track";
 import { cn } from "@/lib/utils";
@@ -30,13 +31,14 @@ export function Navbar() {
       )}
     >
       <nav className="container-x flex h-16 items-center justify-between gap-4 lg:h-20" aria-label="Main">
-        <Link to="/" className="flex items-center gap-2.5 font-display text-sm font-semibold tracking-tight sm:text-base">
-          <span className="grid size-8 place-items-center rounded-lg bg-primary text-primary-foreground shadow-[var(--shadow-glow)]">
-            <span aria-hidden="true" className="font-display text-sm font-bold">
-              /
-            </span>
-          </span>
-          <span className="max-w-[9rem] truncate sm:max-w-none">{business.name}</span>
+        <Link to="/" className="flex shrink-0 items-center pr-4" aria-label={`${business.name} home`}>
+          <img
+            src={markAsset.url}
+            alt={`${business.name} logo`}
+            width={965}
+            height={529}
+            className="h-9 w-auto lg:h-11"
+          />
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">

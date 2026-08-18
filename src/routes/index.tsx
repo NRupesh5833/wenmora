@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, Check, Quote } from "lucide-react";
 import heroImage from "@/assets/hero-devices.jpg";
+import logoAsset from "@/assets/wenmora-logo.png.asset.json";
 import { CTASection } from "@/components/site/CTASection";
 import { Icon } from "@/components/site/Icon";
 import { LeadForm } from "@/components/site/LeadForm";
@@ -72,9 +73,17 @@ function Home() {
         <div className="container-x relative grid items-center gap-14 py-16 lg:grid-cols-[1.05fr_1fr] lg:py-28">
           <div>
             <Reveal>
+              <img
+                src={logoAsset.url}
+                alt={`${business.name} — Design, Develop, Elevate`}
+                width={976}
+                height={728}
+                fetchPriority="high"
+                className="mb-8 h-28 w-auto sm:h-36"
+              />
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/70 px-3 py-1.5 text-xs tracking-widest text-muted-foreground uppercase">
                 <span className="size-1.5 rounded-full bg-primary" aria-hidden="true" />
-                Website design &amp; development studio
+                Design &bull; Develop &bull; Elevate
               </span>
             </Reveal>
             <Reveal delay={80}>
