@@ -88,6 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Website design and development studio building modern, high-performance business websites that generate enquiries.",
       },
       { name: "author", content: business.name },
+      { name: "google-site-verification", content: "NCS1qgN9AlIG2Qw1k2Tk5wde90TVtwToUQ6D8atoruM" },
       { property: "og:site_name", content: business.name },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
