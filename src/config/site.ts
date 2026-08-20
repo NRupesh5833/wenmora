@@ -13,32 +13,38 @@ export const business = {
   tagline: "Design • Develop • Elevate",
   description:
     "Wenmora Technologies combines strategy, design, development and AI to create high-performance digital experiences for modern businesses.",
-  positioning: "Premium digital experience & creative technology studio.",
-  /** TODO: replace with your city / service area */
-  city: "[CITY]",
-  region: "[STATE]",
+  positioning: "Creative technology for businesses ready to build what's next.",
+  city: "Hyderabad",
+  region: "Telangana",
   country: "India",
-  /** TODO: replace with your studio address, or leave as remote-first */
-  address: "[STREET ADDRESS], [CITY], [STATE] [PIN]",
+  postalCode: "500081",
+  address:
+    "4th Floor, NHeights, Phase 2, Cyber Gateway, Hi-Tech City, Hyderabad – 500081, Telangana, India",
+  addressLines: [
+    "4th Floor, NHeights",
+    "Phase 2, Cyber Gateway",
+    "Hi-Tech City",
+    "Hyderabad – 500081",
+    "Telangana, India",
+  ],
   hours: [
     { days: "Monday – Friday", time: "10:00 AM – 7:00 PM" },
     { days: "Saturday", time: "10:00 AM – 2:00 PM" },
     { days: "Sunday", time: "Closed" },
   ],
-  foundedYear: "[YEAR]",
 };
 
 export const contactInfo = {
-  /** TODO: replace with your business email */
-  email: "[hello@yourdomain.com]",
-  /** TODO: replace with your phone number in international format */
-  phone: "[+91 00000 00000]",
-  /** TODO: digits only, with country code, no + or spaces. Example: 919876543210 */
-  whatsappNumber: "",
+  email: "wenmoratechnologies@gmail.com",
+  phone: "+91 7995445833",
+  phoneHref: "+917995445833",
+  whatsappNumber: "917995445833",
   whatsappMessage:
-    "Hi, I'm interested in getting a website for my business. I'd like to discuss my requirements.",
-  /** TODO: replace with a Google Maps embed URL for your location */
+    "Hi Wenmora Technologies, I'm interested in discussing a website or digital project for my business. I'd like to know more about your services.",
   mapsEmbedUrl: "",
+  directionsUrl:
+    "https://www.google.com/maps/dir/?api=1&destination=" +
+    encodeURIComponent("NHeights, Phase 2, Cyber Gateway, Hi-Tech City, Hyderabad 500081, Telangana, India"),
   socials: [
     { label: "LinkedIn", href: "#" },
     { label: "Instagram", href: "#" },
