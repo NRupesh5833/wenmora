@@ -98,7 +98,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+                href={`tel:${contactInfo.phoneHref}`}
                 onClick={() => track("phone_click", { location: "footer" })}
                 className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
               >
@@ -119,7 +119,7 @@ export function Footer() {
               </a>
             </li>
             <li className="pt-1 text-muted-foreground">
-              {business.city}, {business.country}
+              {business.city}, {business.region}
             </li>
           </ul>
         </div>
