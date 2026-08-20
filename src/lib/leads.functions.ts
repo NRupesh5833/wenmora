@@ -11,12 +11,29 @@ const leadInput = z.object({
   need: z.string().trim().max(80).optional().or(z.literal("")),
   budget: z.string().trim().max(80).optional().or(z.literal("")),
   details: z.string().trim().max(1500).optional().or(z.literal("")),
+  preferredContact: z.string().trim().max(40).optional().or(z.literal("")),
+  /** Honeypot — must stay empty. */
+  company_website: z.string().max(0).optional().or(z.literal("")),
 });
 
 export const submitLead = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => leadInput.parse(data))
   .handler(async ({ data }) => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+
+    // Silent success for bots that fill the honeypot.
+    if (data.company_website) return { ok: true as const };
+
+    // Lightweight rate limit: max 3 submissions per email in 10 minutes.
+    const since = new Date(Date.now() - 10 * 60 * 1000).toISOString();
+    const { count } = await supabaseAdmin
+      .from("leads")
+      .select("id", { count: "exact", head: true })
+      .eq("email", data.email)
+      .gte("created_at", since);
+    if ((count ?? 0) >= 3) {
+      throw new Error("Too many requests. Please try again in a few minutes.");
+    }
 
     const { error } = await supabaseAdmin.from("leads").insert({
       name: data.name,
@@ -28,6 +45,7 @@ export const submitLead = createServerFn({ method: "POST" })
       need: data.need || null,
       budget: data.budget || null,
       details: data.details || null,
+      preferred_contact: data.preferredContact || null,
       source: "website",
     });
 
