@@ -530,9 +530,8 @@ export const budgetRanges = [
   "Under ₹25,000",
   "₹25,000 – ₹50,000",
   "₹50,000 – ₹1,00,000",
-  "₹1,00,000 – ₹3,00,000",
-  "₹3,00,000+",
-  "Not sure yet",
+  "₹1,00,000+",
+  "Not sure",
 ];
 
 export const businessTypes = [
