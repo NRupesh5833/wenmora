@@ -550,12 +550,15 @@ export const businessTypes = [
 ];
 
 export const projectNeeds = [
-  "A new website",
-  "Redesign an existing website",
-  "Landing page for a campaign",
-  "E-commerce store",
-  "SEO improvement",
-  "Maintenance & support",
+  "Website Design",
+  "Website Development",
+  "UI/UX Design",
+  "E-commerce",
+  "AI Solutions",
+  "Business Automation",
+  "Custom Software",
+  "SEO & Digital Growth",
+  "Other",
 ];
 
 export const navLinks = [
