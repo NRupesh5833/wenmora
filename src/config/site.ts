@@ -13,32 +13,38 @@ export const business = {
   tagline: "Design • Develop • Elevate",
   description:
     "Wenmora Technologies combines strategy, design, development and AI to create high-performance digital experiences for modern businesses.",
-  positioning: "Premium digital experience & creative technology studio.",
-  /** TODO: replace with your city / service area */
-  city: "[CITY]",
-  region: "[STATE]",
+  positioning: "Creative technology for businesses ready to build what's next.",
+  city: "Hyderabad",
+  region: "Telangana",
   country: "India",
-  /** TODO: replace with your studio address, or leave as remote-first */
-  address: "[STREET ADDRESS], [CITY], [STATE] [PIN]",
+  postalCode: "500081",
+  address:
+    "4th Floor, NHeights, Phase 2, Cyber Gateway, Hi-Tech City, Hyderabad – 500081, Telangana, India",
+  addressLines: [
+    "4th Floor, NHeights",
+    "Phase 2, Cyber Gateway",
+    "Hi-Tech City",
+    "Hyderabad – 500081",
+    "Telangana, India",
+  ],
   hours: [
     { days: "Monday – Friday", time: "10:00 AM – 7:00 PM" },
     { days: "Saturday", time: "10:00 AM – 2:00 PM" },
     { days: "Sunday", time: "Closed" },
   ],
-  foundedYear: "[YEAR]",
 };
 
 export const contactInfo = {
-  /** TODO: replace with your business email */
-  email: "[hello@yourdomain.com]",
-  /** TODO: replace with your phone number in international format */
-  phone: "[+91 00000 00000]",
-  /** TODO: digits only, with country code, no + or spaces. Example: 919876543210 */
-  whatsappNumber: "",
+  email: "wenmoratechnologies@gmail.com",
+  phone: "+91 7995445833",
+  phoneHref: "+917995445833",
+  whatsappNumber: "917995445833",
   whatsappMessage:
-    "Hi, I'm interested in getting a website for my business. I'd like to discuss my requirements.",
-  /** TODO: replace with a Google Maps embed URL for your location */
+    "Hi Wenmora Technologies, I'm interested in discussing a website or digital project for my business. I'd like to know more about your services.",
   mapsEmbedUrl: "",
+  directionsUrl:
+    "https://www.google.com/maps/dir/?api=1&destination=" +
+    encodeURIComponent("NHeights, Phase 2, Cyber Gateway, Hi-Tech City, Hyderabad 500081, Telangana, India"),
   socials: [
     { label: "LinkedIn", href: "#" },
     { label: "Instagram", href: "#" },
@@ -60,11 +66,12 @@ export function whatsappLink(message?: string) {
   return number ? `https://wa.me/${number}?text=${text}` : `https://wa.me/?text=${text}`;
 }
 
+/** Credibility signals — capability-based, never invented numbers. */
 export const trustStats = [
-  { value: "[XX]+", label: "Projects completed" },
-  { value: "[XX]+", label: "Businesses served" },
-  { value: "[XX]+", label: "Industries covered" },
-  { value: "[XX]%", label: "Client satisfaction" },
+  { value: "Custom", label: "Designed around the business" },
+  { value: "Strategic", label: "Goals before pixels" },
+  { value: "AI-assisted", label: "Intelligence used with purpose" },
+  { value: "Hyderabad", label: "Working with businesses everywhere" },
 ];
 
 /** Capability strip shown directly under the hero. */
@@ -332,63 +339,135 @@ export const industries = [
   { name: "Startups", text: "Fast, credible launch sites that explain the product and capture waitlist signups." },
 ];
 
-/** Set `price` to a real figure when you are ready. Keep `priceNote` for context. */
 export const pricingPlans = [
   {
     name: "Starter",
-    subtitle: "For small businesses starting online.",
-    price: "[Price]",
+    subtitle: "For small businesses establishing a professional online presence.",
+    price: "₹24,999",
     priceNote: "One-time project fee",
     featured: false,
     features: [
       "Professional business website",
       "Up to 5 pages",
-      "Responsive design",
+      "Custom responsive layout",
+      "Mobile, tablet and desktop optimization",
       "Contact form",
       "WhatsApp integration",
-      "Basic SEO",
-      "Deployment",
+      "Google Maps integration",
+      "Basic on-page SEO",
+      "Social integration",
+      "SSL and deployment setup",
+      "Basic performance optimization",
+      "2 revision rounds",
+      "30 days post-launch support",
     ],
     cta: "Get Started",
   },
   {
     name: "Professional",
-    subtitle: "For growing businesses.",
-    price: "[Price]",
+    subtitle: "For growing businesses that need a stronger digital presence and lead generation.",
+    price: "₹49,999",
     priceNote: "One-time project fee",
     featured: true,
     features: [
-      "Custom UI/UX",
+      "Everything in Starter",
       "Up to 10 pages",
+      "Custom UI/UX",
+      "Conversion-focused structure",
       "Advanced responsive design",
-      "WhatsApp integration",
-      "Lead forms",
-      "Google Maps",
-      "SEO setup",
-      "Analytics",
+      "WhatsApp and lead generation flows",
+      "Advanced forms",
+      "SEO foundation",
+      "Google Analytics setup",
+      "Google Search Console setup",
       "Performance optimization",
-      "Deployment",
+      "Custom animations and micro-interactions",
+      "Portfolio / case-study section",
+      "3 revision rounds",
+      "60 days post-launch support",
     ],
-    cta: "Most Popular — Start Your Project",
+    cta: "Start Your Project",
   },
   {
     name: "Custom",
-    subtitle: "For businesses requiring advanced functionality.",
-    price: "[Custom Quote]",
+    subtitle: "For businesses requiring advanced functionality, integrations or digital products.",
+    price: "Starting ₹99,999",
     priceNote: "Scoped after discovery",
     featured: false,
     features: [
-      "Custom design",
+      "Custom UI/UX and architecture",
       "Advanced functionality",
-      "CMS",
-      "Database",
-      "E-commerce",
-      "API integrations",
+      "CMS and database",
+      "Authentication where required",
+      "E-commerce and payment integrations",
+      "API and CRM integrations",
       "Advanced SEO",
       "Custom dashboards",
-      "Ongoing support",
+      "AI integrations and business automation",
+      "Advanced analytics",
+      "Scalable architecture",
+      "Priority support",
     ],
     cta: "Discuss Your Project",
+  },
+];
+
+/** Optional add-on services. */
+export const addOns = [
+  { name: "Extra page", price: "₹2,500 / page" },
+  { name: "Landing page", price: "Starting ₹7,500" },
+  { name: "Additional revision round", price: "₹2,500" },
+  { name: "Blog / CMS setup", price: "Starting ₹5,000" },
+  { name: "Basic SEO expansion", price: "Starting ₹7,500" },
+  { name: "E-commerce add-on", price: "Starting ₹25,000" },
+  { name: "Payment gateway integration", price: "Starting ₹7,500" },
+  { name: "Custom API integration", price: "Starting ₹10,000" },
+  { name: "AI integration", price: "Starting ₹15,000" },
+  { name: "Business automation", price: "Starting ₹15,000" },
+  { name: "Monthly maintenance", price: "₹4,999 / month" },
+];
+
+/** Ongoing care plans. */
+export const maintenancePlans = [
+  {
+    name: "Essential Care",
+    price: "₹4,999",
+    priceNote: "per month",
+    features: [
+      "Minor content updates",
+      "Technical monitoring",
+      "Maintenance checks",
+      "Backup monitoring",
+      "Small UI and content changes",
+      "Basic performance monitoring",
+    ],
+  },
+  {
+    name: "Growth Care",
+    price: "₹9,999",
+    priceNote: "per month",
+    features: [
+      "Everything in Essential Care",
+      "Regular content updates",
+      "Conversion improvements",
+      "Performance optimization",
+      "SEO monitoring",
+      "Analytics review",
+      "Priority support",
+    ],
+  },
+  {
+    name: "Custom Support",
+    price: "Custom",
+    priceNote: "Scoped to your product",
+    features: [
+      "Web applications",
+      "E-commerce platforms",
+      "AI features",
+      "Business automation",
+      "Dashboards",
+      "Ongoing development",
+    ],
   },
 ];
 
@@ -406,11 +485,8 @@ export type Testimonial = {
   isPlaceholder: boolean;
 };
 
-export const testimonials: Testimonial[] = [
-  { quote: "Client testimonial will appear here.", name: "[Client Name]", position: "[Position]", company: "[Company]", rating: null, photo: null, isPlaceholder: true },
-  { quote: "Client testimonial will appear here.", name: "[Client Name]", position: "[Position]", company: "[Company]", rating: null, photo: null, isPlaceholder: true },
-  { quote: "Client testimonial will appear here.", name: "[Client Name]", position: "[Position]", company: "[Company]", rating: null, photo: null, isPlaceholder: true },
-];
+/** Empty until real, verified client feedback exists. Never publish invented reviews. */
+export const testimonials: Testimonial[] = [];
 
 export const faqs = [
   {
@@ -451,9 +527,8 @@ export const budgetRanges = [
   "Under ₹25,000",
   "₹25,000 – ₹50,000",
   "₹50,000 – ₹1,00,000",
-  "₹1,00,000 – ₹3,00,000",
-  "₹3,00,000+",
-  "Not sure yet",
+  "₹1,00,000+",
+  "Not sure",
 ];
 
 export const businessTypes = [
@@ -472,12 +547,15 @@ export const businessTypes = [
 ];
 
 export const projectNeeds = [
-  "A new website",
-  "Redesign an existing website",
-  "Landing page for a campaign",
-  "E-commerce store",
-  "SEO improvement",
-  "Maintenance & support",
+  "Website Design",
+  "Website Development",
+  "UI/UX Design",
+  "E-commerce",
+  "AI Solutions",
+  "Business Automation",
+  "Custom Software",
+  "SEO & Digital Growth",
+  "Other",
 ];
 
 export const navLinks = [

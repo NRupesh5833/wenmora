@@ -25,7 +25,7 @@ import {
   processSteps,
   projects,
   services,
-  testimonials,
+  trustStats,
   whyChooseUs,
 } from "@/config/site";
 import { projectImages } from "@/lib/project-images";
@@ -460,36 +460,31 @@ function Home() {
         </ul>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* TRUST */}
       <section className="border-y border-border bg-surface/30">
         <div className="container-x py-20 lg:py-28">
           <Reveal>
-            <SectionLabel num="09" label="Testimonials" />
+            <SectionLabel num="09" label="Trust" />
           </Reveal>
           <SectionHeading
             className="mt-5"
-            title="What clients say."
-            description="Real client feedback will be published here. We don't display reviews we haven't received."
+            title="Trust is built through the work."
+            description="Every project is an opportunity to create something useful, thoughtful and built around a real business need. We don't publish reviews we haven't received."
           />
-          <ul className="mt-12 grid gap-4 lg:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <Reveal as="li" key={i} delay={i * 70} className="edge-card p-7">
-                <Quote className="size-6 text-primary/70" aria-hidden="true" />
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground italic">&ldquo;{t.quote}&rdquo;</p>
-                <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                  <span className="grid size-10 place-items-center rounded-full border border-border bg-surface-2 text-xs text-muted-foreground">
-                    —
-                  </span>
-                  <div className="text-sm">
-                    <p className="font-medium">{t.name}</p>
-                    <p className="text-muted-foreground">
-                      {t.position}, {t.company}
-                    </p>
-                  </div>
-                </div>
+          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {trustStats.map((s, i) => (
+              <Reveal as="li" key={s.label} delay={i * 70} className="edge-card p-7">
+                <Quote className="size-5 text-primary/70" aria-hidden="true" />
+                <p className="mt-4 font-display text-xl font-semibold">{s.value}</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{s.label}</p>
               </Reveal>
             ))}
           </ul>
+          <Reveal className="mt-8">
+            <Button asChild variant="outline">
+              <Link to="/work">See the work</Link>
+            </Button>
+          </Reveal>
         </div>
       </section>
 
