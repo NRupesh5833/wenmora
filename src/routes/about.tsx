@@ -40,7 +40,7 @@ function AboutPage() {
       <PageHeader
         eyebrow="About"
         title="We Design What's Next."
-        description="We design and develop websites for businesses that need their online presence to actually work — not just exist."
+        description="Wenmora Technologies brings strategy, design, development and emerging technology together to create digital experiences for modern businesses."
       />
 
       <section className="container-x py-16 lg:py-24">
@@ -48,13 +48,14 @@ function AboutPage() {
           <Reveal className="surface-card p-8">
             <h2 className="text-2xl font-semibold">Who We Are</h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              {business.name} is a website design and development practice working with small businesses, startups and
-              established local brands. We handle strategy, design, development and post-launch support so business
-              owners have one accountable partner instead of several disconnected vendors.
+              {business.legalName} is a creative technology company working across web design, development, UI/UX,
+              AI-powered experiences, automation and custom software. Strategy, design, engineering and post-launch
+              support sit with one accountable partner instead of several disconnected vendors.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Team details, founding year and project history are shown as placeholders in this configuration and will
-              be published here once confirmed.
+              Experience is built through solving different problems, working across different requirements and
+              continuously refining how digital products are designed and built. Every project adds another layer of
+              knowledge, refinement and capability.
             </p>
           </Reveal>
           <Reveal delay={80} className="surface-card p-8">
