@@ -567,3 +567,18 @@ export const navLinks = [
   { label: "Pricing", to: "/pricing" },
   { label: "Contact", to: "/contact" },
 ] as const;
+
+export const techStack = [
+  { group: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+  { group: "Backend", items: ["Node.js", "Python", "APIs", "Databases"] },
+  { group: "Design", items: ["Figma", "UI/UX", "Design systems"] },
+  { group: "Deployment", items: ["GitHub", "Vercel", "Cloud platforms"] },
+];
+
+export const aiCapabilities = [
+  { title: "AI graphic design", text: "Distinctive visual assets produced quickly, then refined by hand.", icon: "Palette" },
+  { title: "AI-assisted development", text: "Faster, smarter build workflows without giving up code quality.", icon: "Code2" },
+  { title: "AI integrations", text: "Useful intelligent functionality inside the product itself.", icon: "Sparkles" },
+  { title: "Automation", text: "Digital workflows that remove repetitive business processes.", icon: "Workflow" },
+  { title: "Intelligent interfaces", text: "Interfaces that adapt and make the experience more useful.", icon: "Layers" },
+];
