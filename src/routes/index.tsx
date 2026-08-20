@@ -15,6 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
+  aiCapabilities,
   business,
   capabilities,
   faqs,
@@ -25,6 +26,7 @@ import {
   processSteps,
   projects,
   services,
+  techStack,
   trustStats,
   whyChooseUs,
 } from "@/config/site";
@@ -460,11 +462,55 @@ function Home() {
         </ul>
       </section>
 
+      {/* TECHNOLOGY + INTELLIGENCE */}
+      <section className="container-x py-20 lg:py-28">
+        <Reveal>
+          <SectionLabel num="09" label="Technology" />
+        </Reveal>
+        <SectionHeading
+          className="mt-5"
+          title="Technology that supports the experience."
+          description="A modern stack chosen for speed, maintainability and the things the business actually needs."
+        />
+        <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {techStack.map((g, i) => (
+            <Reveal as="li" key={g.group} delay={(i % 4) * 60} className="edge-card p-6">
+              <p className="eyebrow text-primary">{g.group}</p>
+              <ul className="mt-4 space-y-1.5">
+                {g.items.map((t) => (
+                  <li key={t} className="text-sm text-muted-foreground">{t}</li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
+        </ul>
+
+        <div className="hairline my-14" aria-hidden="true" />
+
+        <SectionHeading
+          title="Intelligence, used with purpose."
+          description="AI is applied where it adds real value to the design, the build or the business — never as decoration."
+        />
+        <ul className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {aiCapabilities.map((a, i) => (
+            <Reveal as="li" key={a.title} delay={(i % 3) * 60} className="flex gap-4 bg-background p-7 transition-colors hover:bg-surface/60">
+              <span className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-lg border border-border bg-surface text-primary">
+                <Icon name={a.icon} className="size-5" />
+              </span>
+              <div>
+                <h3 className="text-base font-semibold">{a.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{a.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </ul>
+      </section>
+
       {/* TRUST */}
       <section className="border-y border-border bg-surface/30">
         <div className="container-x py-20 lg:py-28">
           <Reveal>
-            <SectionLabel num="09" label="Trust" />
+            <SectionLabel num="10" label="Trust" />
           </Reveal>
           <SectionHeading
             className="mt-5"
@@ -492,7 +538,7 @@ function Home() {
       <section className="container-x grid gap-12 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:py-28">
         <div>
           <Reveal>
-            <SectionLabel num="10" label="FAQ" />
+            <SectionLabel num="11" label="FAQ" />
           </Reveal>
           <SectionHeading
             className="mt-5"
@@ -516,7 +562,7 @@ function Home() {
       <section id="consultation" className="border-t border-border bg-surface/30">
         <div className="container-x py-20 lg:py-28">
           <Reveal>
-            <SectionLabel num="11" label="Start a project" />
+            <SectionLabel num="12" label="Start a project" />
           </Reveal>
           <SectionHeading
             className="mt-5"
