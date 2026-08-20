@@ -66,11 +66,12 @@ export function whatsappLink(message?: string) {
   return number ? `https://wa.me/${number}?text=${text}` : `https://wa.me/?text=${text}`;
 }
 
+/** Credibility signals — capability-based, never invented numbers. */
 export const trustStats = [
-  { value: "[XX]+", label: "Projects completed" },
-  { value: "[XX]+", label: "Businesses served" },
-  { value: "[XX]+", label: "Industries covered" },
-  { value: "[XX]%", label: "Client satisfaction" },
+  { value: "Custom", label: "Designed around the business" },
+  { value: "Strategic", label: "Goals before pixels" },
+  { value: "AI-assisted", label: "Intelligence used with purpose" },
+  { value: "Hyderabad", label: "Working with businesses everywhere" },
 ];
 
 /** Capability strip shown directly under the hero. */
