@@ -25,7 +25,7 @@ import {
   processSteps,
   projects,
   services,
-  testimonials,
+  trustStats,
   whyChooseUs,
 } from "@/config/site";
 import { projectImages } from "@/lib/project-images";
