@@ -38,6 +38,7 @@ export const Route = createFileRoute("/contact")({
             streetAddress: business.address,
             addressLocality: business.city,
             addressRegion: business.region,
+            postalCode: business.postalCode,
             addressCountry: business.country,
           },
         }),
