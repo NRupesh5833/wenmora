@@ -53,8 +53,8 @@ function ContactPage() {
     <>
       <PageHeader
         eyebrow="Contact"
-        title="Let's Create What's Next."
-        description="Share a few details about your business and we'll respond with the right next step — a call, a quote, or a quick strategy suggestion."
+        title="Let's Build What's Next."
+        description="Have a business idea, an outdated website, or a digital experience that needs to perform better? Tell us what you're looking to build."
       />
 
       <section className="container-x grid gap-10 py-16 lg:grid-cols-[1fr_1.4fr] lg:py-24">
@@ -94,11 +94,27 @@ function ContactPage() {
                   Chat on WhatsApp
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-                {business.address}
-              </li>
             </ul>
+          </div>
+
+          <div className="surface-card p-6">
+            <h2 className="inline-flex items-center gap-2 text-lg font-semibold">
+              <MapPin className="size-4 text-primary" aria-hidden="true" />
+              Visit Wenmora
+            </h2>
+            <address className="mt-4 space-y-1 text-sm not-italic text-muted-foreground">
+              {business.addressLines.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </address>
+            <a
+              href={contactInfo.directionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+            >
+              Get directions →
+            </a>
           </div>
 
           <div className="surface-card p-6">
@@ -134,8 +150,8 @@ function ContactPage() {
             </ul>
           </div>
 
-          <div className="surface-card overflow-hidden">
-            {contactInfo.mapsEmbedUrl ? (
+          {contactInfo.mapsEmbedUrl ? (
+            <div className="surface-card overflow-hidden">
               <iframe
                 src={contactInfo.mapsEmbedUrl}
                 title={`Map showing the location of ${business.name}`}
@@ -143,12 +159,8 @@ function ContactPage() {
                 className="h-64 w-full border-0"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-            ) : (
-              <div className="grid h-40 place-items-center p-6 text-center text-sm text-muted-foreground">
-                Add a Google Maps embed URL in the site configuration to display your location here.
-              </div>
-            )}
-          </div>
+            </div>
+          ) : null}
         </Reveal>
 
         <Reveal delay={80}>
