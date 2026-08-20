@@ -532,6 +532,8 @@ export const budgetRanges = [
   "Not sure",
 ];
 
+export const preferredContactMethods = ["Email", "Phone call", "WhatsApp"];
+
 export const businessTypes = [
   "Restaurant / Cafe",
   "Real Estate",
