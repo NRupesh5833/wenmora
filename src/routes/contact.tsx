@@ -74,7 +74,7 @@ function ContactPage() {
               </li>
               <li>
                 <a
-                  href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+                  href={`tel:${contactInfo.phoneHref}`}
                   onClick={() => track("phone_click", { location: "contact_page" })}
                   className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground"
                 >
