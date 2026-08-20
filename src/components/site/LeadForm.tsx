@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { budgetRanges, businessTypes, projectNeeds } from "@/config/site";
+import { budgetRanges, businessTypes, contactInfo, preferredContactMethods, projectNeeds, whatsappLink } from "@/config/site";
 import { track } from "@/lib/track";
 import { submitLead } from "@/lib/leads.functions";
 
@@ -20,6 +20,8 @@ const leadSchema = z.object({
   need: z.string().trim().max(80).optional().or(z.literal("")),
   budget: z.string().trim().max(80).optional().or(z.literal("")),
   details: z.string().trim().max(1500).optional().or(z.literal("")),
+  preferredContact: z.string().trim().max(40).optional().or(z.literal("")),
+  company_website: z.string().max(0).optional().or(z.literal("")),
 });
 
 const selectClass =
@@ -54,9 +56,7 @@ export function LeadForm() {
       track("consultation_request", { form: "lead" });
       setSubmitted(true);
     } catch {
-      setSendError(
-        "We couldn't send your request just now. Please try again, or message us on WhatsApp and we'll respond right away.",
-      );
+      setSendError("Your enquiry could not be submitted right now. Please try again or contact us directly.");
     } finally {
       setPending(false);
     }
@@ -66,14 +66,20 @@ export function LeadForm() {
     return (
       <div className="surface-card p-8 text-center sm:p-12" role="status" aria-live="polite">
         <CheckCircle2 className="mx-auto size-12 text-primary" aria-hidden="true" />
-        <h3 className="mt-5 text-2xl font-semibold">Thank you — your request has been received.</h3>
+        <h3 className="mt-5 text-2xl font-semibold">Thank you!</h3>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-          We&apos;ll review your requirements and get back to you with next steps and a suggested website strategy. If
-          it&apos;s urgent, message us on WhatsApp and we&apos;ll respond faster.
+          Your enquiry has been received successfully. Our team will review your requirements and get back to you.
         </p>
-        <Button variant="outline" className="mt-6" onClick={() => setSubmitted(false)}>
-          Submit another request
-        </Button>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <Button asChild>
+            <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
+              Chat on WhatsApp →
+            </a>
+          </Button>
+          <Button variant="outline" onClick={() => setSubmitted(false)}>
+            Submit another request
+          </Button>
+        </div>
       </div>
     );
   }
@@ -135,12 +141,48 @@ export function LeadForm() {
             placeholder="Tell us about your business, your customers and what the website needs to achieve."
           />
         </Field>
+        <Field id="preferredContact" label="Preferred contact method" error={errors["preferredContact"]}>
+          <select id="preferredContact" name="preferredContact" className={selectClass} defaultValue="">
+            <option value="">Select an option</option>
+            {preferredContactMethods.map((m) => (
+              <option key={m} value={m}>
+                {m}
+              </option>
+            ))}
+          </select>
+        </Field>
+      </div>
+
+      <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
+        <label htmlFor="company_website">Company website</label>
+        <input id="company_website" name="company_website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
       {sendError ? (
-        <p className="mt-6 text-sm text-destructive" role="alert">
-          {sendError}
-        </p>
+        <div className="mt-6 rounded-lg border border-destructive/40 bg-destructive/5 p-4" role="alert">
+          <p className="text-sm font-semibold text-destructive">Something went wrong</p>
+          <p className="mt-1 text-sm text-muted-foreground">{sendError}</p>
+          <ul className="mt-3 space-y-1 text-sm">
+            <li>
+              Email:{" "}
+              <a className="text-primary hover:underline" href={`mailto:${contactInfo.email}`}>
+                {contactInfo.email}
+              </a>
+            </li>
+            <li>
+              Phone:{" "}
+              <a className="text-primary hover:underline" href={`tel:${contactInfo.phoneHref}`}>
+                {contactInfo.phone}
+              </a>
+            </li>
+            <li>
+              WhatsApp:{" "}
+              <a className="text-primary hover:underline" href={whatsappLink()} target="_blank" rel="noopener noreferrer">
+                {contactInfo.phone}
+              </a>
+            </li>
+          </ul>
+        </div>
       ) : null}
 
       <Button type="submit" size="lg" disabled={pending} className="mt-7 w-full sm:w-auto">
