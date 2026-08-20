@@ -485,11 +485,8 @@ export type Testimonial = {
   isPlaceholder: boolean;
 };
 
-export const testimonials: Testimonial[] = [
-  { quote: "Client testimonial will appear here.", name: "[Client Name]", position: "[Position]", company: "[Company]", rating: null, photo: null, isPlaceholder: true },
-  { quote: "Client testimonial will appear here.", name: "[Client Name]", position: "[Position]", company: "[Company]", rating: null, photo: null, isPlaceholder: true },
-  { quote: "Client testimonial will appear here.", name: "[Client Name]", position: "[Position]", company: "[Company]", rating: null, photo: null, isPlaceholder: true },
-];
+/** Empty until real, verified client feedback exists. Never publish invented reviews. */
+export const testimonials: Testimonial[] = [];
 
 export const faqs = [
   {
