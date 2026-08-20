@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { z } from "zod";
+import { useServerFn } from "@tanstack/react-start";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { budgetRanges, businessTypes, projectNeeds } from "@/config/site";
 import { track } from "@/lib/track";
+import { submitLead } from "@/lib/leads.functions";
 
 const leadSchema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(100),
@@ -26,8 +28,11 @@ const selectClass =
 export function LeadForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [pending, setPending] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
+  const send = useServerFn(submitLead);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
     const result = leadSchema.safeParse(data);
@@ -40,9 +45,21 @@ export function LeadForm() {
     }
 
     setErrors({});
-    track("contact_form_submit", { form: "lead" });
-    track("consultation_request", { form: "lead" });
-    setSubmitted(true);
+    setSendError(null);
+    setPending(true);
+
+    try {
+      await send({ data: result.data });
+      track("contact_form_submit", { form: "lead" });
+      track("consultation_request", { form: "lead" });
+      setSubmitted(true);
+    } catch {
+      setSendError(
+        "We couldn't send your request just now. Please try again, or message us on WhatsApp and we'll respond right away.",
+      );
+    } finally {
+      setPending(false);
+    }
   }
 
   if (submitted) {
@@ -120,8 +137,14 @@ export function LeadForm() {
         </Field>
       </div>
 
-      <Button type="submit" size="lg" className="mt-7 w-full sm:w-auto">
-        Request a Free Consultation
+      {sendError ? (
+        <p className="mt-6 text-sm text-destructive" role="alert">
+          {sendError}
+        </p>
+      ) : null}
+
+      <Button type="submit" size="lg" disabled={pending} className="mt-7 w-full sm:w-auto">
+        {pending ? "Sending…" : "Request a Free Consultation"}
       </Button>
       <p className="mt-3 text-xs text-muted-foreground">
         Your details are used only to respond to this enquiry.
