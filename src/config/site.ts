@@ -61,6 +61,7 @@ export const analytics = {
 };
 
 export function whatsappLink(message?: string) {
+
   const text = encodeURIComponent(message ?? contactInfo.whatsappMessage);
   const number = contactInfo.whatsappNumber.replace(/\D/g, "");
   return number ? `https://wa.me/${number}?text=${text}` : `https://wa.me/?text=${text}`;
@@ -530,6 +531,8 @@ export const budgetRanges = [
   "₹1,00,000+",
   "Not sure",
 ];
+
+export const preferredContactMethods = ["Email", "Phone call", "WhatsApp"];
 
 export const businessTypes = [
   "Restaurant / Cafe",
