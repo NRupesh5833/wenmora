@@ -26,6 +26,7 @@ export type Database = {
           name: string
           need: string | null
           phone: string
+          preferred_contact: string | null
           source: string
           website_url: string | null
         }
@@ -40,6 +41,7 @@ export type Database = {
           name: string
           need?: string | null
           phone: string
+          preferred_contact?: string | null
           source?: string
           website_url?: string | null
         }
@@ -54,6 +56,7 @@ export type Database = {
           name?: string
           need?: string | null
           phone?: string
+          preferred_contact?: string | null
           source?: string
           website_url?: string | null
         }
