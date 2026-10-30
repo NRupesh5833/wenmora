@@ -35,7 +35,7 @@ export const business = {
 };
 
 export const contactInfo = {
-  email: "wenmoratechnologies@gmail.com",
+  email: "info@wenmora.com",
   phone: "+91 7995445833",
   phoneHref: "+917995445833",
   whatsappNumber: "917995445833",
