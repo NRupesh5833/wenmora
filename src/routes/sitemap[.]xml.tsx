@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { projects } from "@/config/site";
 
-const BASE_URL = "https://wenmora.lovable.app";
+const BASE_URL = "https://wenmora.com";
 
 const staticPaths = [
   "/",

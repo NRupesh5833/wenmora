@@ -75,7 +75,7 @@ function ProjectPage() {
                 </span>
               ) : null}
             </div>
-            <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">{project.name}</h1>
+            <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">{project.name} — {project.businessType} Website Design &amp; Development</h1>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">{project.description}</p>
             <ul className="mt-6 flex flex-wrap gap-2">
               {project.technologies.map((t) => (

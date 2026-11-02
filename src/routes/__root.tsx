@@ -143,6 +143,8 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Second Search Console token (wenmora.com); kept here because head() dedupes same-name meta. */}
+        <meta name="google-site-verification" content="tTlz0SLsx1jadfKR3eltkRC3g_-mAY1wbqG4nhQTH7k" />
         <HeadContent />
       </head>
       <body>

@@ -30,7 +30,7 @@ function ProcessPage() {
     <>
       <PageHeader
         eyebrow="Process"
-        title="From Idea to Impact."
+        title="Our Website Design & Development Process: From Idea to Impact"
         description="You always know which stage the project is in, what is expected from you, and what happens next."
       />
 

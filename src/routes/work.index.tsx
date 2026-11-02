@@ -33,7 +33,7 @@ function WorkPage() {
     <>
       <PageHeader
         eyebrow="Portfolio"
-        title="Selected Digital Experiences."
+        title="Website Design & Development Portfolio: Selected Digital Experiences"
         description="These are demo concepts created to demonstrate our design and development approach for different industries. They are clearly marked and are not presented as client projects."
       />
 

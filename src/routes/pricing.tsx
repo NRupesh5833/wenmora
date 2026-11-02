@@ -40,7 +40,7 @@ function PricingPage() {
     <>
       <PageHeader
         eyebrow="Pricing"
-        title="Packages Built Around What Your Business Needs"
+        title="Website Packages & Pricing Built Around Your Business"
         description="Every engagement is quoted after a short discovery conversation. These packages show what each level of engagement typically includes."
       />
 
