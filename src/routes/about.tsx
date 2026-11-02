@@ -39,7 +39,7 @@ function AboutPage() {
     <>
       <PageHeader
         eyebrow="About"
-        title="We Design What's Next."
+        title="About Wenmora Technologies: The Studio Behind What's Next"
         description="Wenmora Technologies brings strategy, design, development and emerging technology together to create digital experiences for modern businesses."
       />
 

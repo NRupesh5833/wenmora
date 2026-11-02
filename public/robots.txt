@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://wenmora.lovable.app/sitemap.xml
+Sitemap: https://wenmora.com/sitemap.xml

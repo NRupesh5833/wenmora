@@ -33,7 +33,7 @@ function ServicesPage() {
     <>
       <PageHeader
         eyebrow="Services"
-        title="Design, Technology and Intelligence Under One Roof."
+        title="Website Design, Development & AI Services Under One Roof"
         description="Design, development, optimization and support — delivered as one coherent engagement rather than disconnected tasks."
       />
 
